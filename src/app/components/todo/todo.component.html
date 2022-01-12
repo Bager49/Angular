@@ -1,0 +1,35 @@
+<div *ngIf="dataLoaded == false" class="spinner-border text-success" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="mb-3">
+  <label for="filterText" class="form-label">Such Todo </label>
+  <input type="text" [(ngModel)]="filterText" class="form-control" id="filterText" placeholder="To Do icinde ara">
+</div>
+<div *ngIf="filterText.length > 2" class="alert alert-info">
+  {{filterText}} wurde gesucht..
+</div>
+<table class="table table-bordered" *ngIf="dataLoaded == true">
+  <thead>
+    <tr>
+      <th>UserId</th>
+      <th>Id</th>
+      <th>title</th>
+      <th>Subtitle</th>
+      <th>completed</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let todo of todos | filterPipe : filterText">
+      <!--- filter.piep daki filter islenini uyguladik-->
+      <td>{{ todo.userId }}</td>
+      <td>{{ todo.id }}</td>
+      <td>{{ todo.title }}</td>
+      <td>{{ todo.title | vatAdded}}</td>
+      <td>{{ todo.completed }}</td>
+      <td><button class="btn btn-success" (click)="addToCard(todo)">Korb</button> </td>
+      <!---- todo yu fonksiyona yolla -->
+    </tr>
+  </tbody>
+
+</table>
