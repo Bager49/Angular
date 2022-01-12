@@ -1,0 +1,8 @@
+<ul class="list-group">
+  <li [class]=" getAllCategoryClass()" routerLink="todos">Alle Todos</li>
+  <li [class]=" getCurrentCategoryClass(category)" (click)="setcurrentCategory(category)"
+    routerLink="todos/{{category.id}}" *ngFor="let category of category">{{category.id}}</li>
+</ul>
+
+
+<span class="bg-info">{{currentCategory.title}}</span> details über Sie selected haben
