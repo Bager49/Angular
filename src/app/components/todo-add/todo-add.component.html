@@ -1,0 +1,48 @@
+<div class="content">
+  <div class="col-m-12">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="title">Product hinzufügen</h5>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="todoAddFrom">
+          <label for="title">Todo Name</label>
+          <div class="mb-3">
+            <div class="form-group">
+              <input class="form-control" type="text" id="title" formControlName="title" placeholder="ToDo adi" />
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="id">Todo Id</label>
+            <div class="form-group">
+              <input class="form-control" type="number" id="id" formControlName="id" placeholder="Todo Id" />
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="userId">Benutzer Id</label>
+            <div class="form-group">
+              <input class="form-control" type="number" id="userId" formControlName="userId" placeholder="User Id" />
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="completed">Vervollständigt</label>
+            <div class="form-group">
+              <input class="form-control" type="text" id="completed" formControlName="completed"
+                placeholder="Completed" />
+            </div>
+          </div>
+
+
+        </form>
+      </div>
+
+      <div class="card-footer">
+        <button class="btn btn-fill btn-primary" (click)="add()">Add</button>
+      </div>
+
+    </div>
+  </div>
+</div>
