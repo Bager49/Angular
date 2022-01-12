@@ -1,0 +1,28 @@
+<body class="text-center">
+    
+    <main class="form-signin">
+      <form [formGroup]="loginForm">
+        <img class="mb-4" src="https://mpng.subpng.com/20190601/cha/kisspng-computer-icons-portable-network-graphics-vector-gr-login-icon-png-single-sign-on-icon-539x539-p-5cf3251b60f3f3.4826309215594386193971.jpg" alt="" width="72" height="57">
+        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+    
+        <div class="form-floating">
+          <input formControlName="email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+          <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating">
+          <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+          <label for="floatingPassword">Password</label>
+        </div>
+    
+        <div class="checkbox mb-3">
+          <label>
+            <input formControlName="password"  type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button class="w-100 btn btn-lg btn-primary" type="button" (click)="login()">Sign in</button>
+      </form>
+    </main>
+    
+    
+        
+      </body>
