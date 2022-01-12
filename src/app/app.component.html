@@ -1,0 +1,31 @@
+<!-- <h3>{{title}}</h3>
+<h4>Merhaba {{username}}</h4>
+<ul *ngFor="let product of products">
+  <li>{{product.productName}}</li>
+</ul> -->
+<div class="container">
+  <app-navi></app-navi>
+  <div class="row mt-3">
+    <div class="col-md-3">
+      <app-category></app-category>
+    </div>
+    <div class="col-md-9">
+      <!-- <app-todo></app-todo> -->
+      <router-outlet></router-outlet> 
+      <!-- burasi surekli degisecegi icin buraya router i getirdik -->
+      <!-- app-riuting deki const routes: Routes = []; dizisine tanimliyoruz -->
+    </div>
+  </div>
+
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col">
+        <app-todo-add></app-todo-add>
+    </div>
+    <div class="col">
+      <app-login></app-login>
+    </div>
+  </div>
+</div>
+
